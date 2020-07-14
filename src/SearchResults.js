@@ -23,7 +23,7 @@ class SearchResults extends Component {
     onSuggestionsFetchRequested = ({ value }) => {
         console.time('Suggest');
         // Do the search
-        fetch(`http://localhost:5000/suggest?suggest=${this.state.value}`)
+        fetch(`http://localhost:5000/suggest?suggest=${value}`)
             .then(result => {
                 console.timeEnd('Suggest');
                 return result.json();
